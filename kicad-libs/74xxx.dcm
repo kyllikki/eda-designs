@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74LS189
+D 64-bit (16x4) RAM, inverting three-state outputs
+K TTL RAM
+$ENDCMP
+#
+#End Doc Library

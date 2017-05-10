@@ -1,0 +1,698 @@
+EESchema Schematic File Version 2
+LIBS:28c16
+LIBS:74xxx
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+LIBS:sap-be-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 11
+Title "Simple As Possible computer by Ben Eater"
+Date "2017-05-10"
+Rev "0"
+Comp "Schematic released as CC BY-SA"
+Comment1 "Schematic capture by Vincent Sanders"
+Comment2 "Main w bus and top level view"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Bus Line
+	4500 700  4500 4700
+$Sheet
+S 5100 2950 1050 550 
+U 590C07A8
+F0 "ALU" 60
+F1 "ALU.sch" 60
+F2 "SUBTRACT" I L 5100 3300 60 
+F3 "~WENABLE" I L 5100 3150 60 
+F4 "w[0..7]" T L 5100 3050 60 
+F5 "b[0..7]" I R 6150 3150 60 
+F6 "a[0..7]" I R 6150 3050 60 
+F7 "CARRY" O L 5100 3400 60 
+$EndSheet
+$Comp
+L GND #PWR01
+U 1 1 59143FF4
+P 7200 6050
+F 0 "#PWR01" H 7200 5800 50  0001 C CNN
+F 1 "GND" H 7200 5900 50  0000 C CNN
+F 2 "" H 7200 6050 50  0000 C CNN
+F 3 "" H 7200 6050 50  0000 C CNN
+	1    7200 6050
+	1    0    0    -1  
+$EndComp
+Text Label 4750 4150 0    60   ~ 0
+~BI
+Text Label 4750 4000 0    60   ~ 0
+~BO
+Text Label 4750 2350 0    60   ~ 0
+~AI
+Text Label 4750 2200 0    60   ~ 0
+~AO
+Text Label 4750 3300 0    60   ~ 0
+SU
+Text Label 4750 3150 0    60   ~ 0
+~EO
+Text Label 4750 4350 0    60   ~ 0
+CLR
+Text Label 4750 2550 0    60   ~ 0
+CLR
+$Sheet
+S 2700 950  1150 650 
+U 591AA1A6
+F0 "clock" 60
+F1 "clock.sch" 60
+F2 "CLK" O R 3850 1050 60 
+F3 "HLT" I R 3850 1250 60 
+F4 "~CLK" O R 3850 1150 60 
+$EndSheet
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 590D3658
+P 10550 850
+F 0 "#FLG02" H 10550 945 50  0001 C CNN
+F 1 "PWR_FLAG" H 10550 1030 50  0000 C CNN
+F 2 "" H 10550 850 50  0000 C CNN
+F 3 "" H 10550 850 50  0000 C CNN
+	1    10550 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 590D37F8
+P 10900 950
+F 0 "#FLG03" H 10900 1045 50  0001 C CNN
+F 1 "PWR_FLAG" H 10900 1130 50  0000 C CNN
+F 2 "" H 10900 950 50  0000 C CNN
+F 3 "" H 10900 950 50  0000 C CNN
+	1    10900 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 590D3998
+P 10550 950
+F 0 "#PWR04" H 10550 700 50  0001 C CNN
+F 1 "GND" H 10550 800 50  0000 C CNN
+F 2 "" H 10550 950 50  0000 C CNN
+F 3 "" H 10550 950 50  0000 C CNN
+	1    10550 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR05
+U 1 1 590D3B38
+P 10900 850
+F 0 "#PWR05" H 10900 700 50  0001 C CNN
+F 1 "VCC" H 10900 1000 50  0000 C CNN
+F 2 "" H 10900 850 50  0000 C CNN
+F 3 "" H 10900 850 50  0000 C CNN
+	1    10900 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 850  10550 950 
+Wire Wire Line
+	10900 850  10900 950 
+Entry Bus Bus
+	4500 2000 4600 2100
+Wire Bus Line
+	4600 2100 5100 2100
+$Sheet
+S 5100 3800 1050 650 
+U 590AA801
+F0 "RegisterB" 60
+F1 "register.sch" 60
+F2 "~RENABLE" I R 6150 4000 60 
+F3 "CLR" I L 5100 4350 60 
+F4 "~LOAD" I L 5100 4150 60 
+F5 "~WENABLE" I L 5100 4000 60 
+F6 "w[0..7]" B L 5100 3900 60 
+F7 "CLK" I L 5100 4250 60 
+F8 "r[0..7]" O R 6150 3900 60 
+$EndSheet
+$Sheet
+S 5100 2000 1050 650 
+U 590A2A35
+F0 "RegisterA" 60
+F1 "register.sch" 60
+F2 "~RENABLE" I R 6150 2200 60 
+F3 "CLR" I L 5100 2550 60 
+F4 "~LOAD" I L 5100 2350 60 
+F5 "w[0..7]" B L 5100 2100 60 
+F6 "~WENABLE" I L 5100 2200 60 
+F7 "CLK" I L 5100 2450 60 
+F8 "r[0..7]" O R 6150 2100 60 
+$EndSheet
+$Comp
+L GND #PWR06
+U 1 1 591162DB
+P 6300 4000
+F 0 "#PWR06" H 6300 3750 50  0001 C CNN
+F 1 "GND" H 6300 3850 50  0000 C CNN
+F 2 "" H 6300 4000 50  0000 C CNN
+F 3 "" H 6300 4000 50  0000 C CNN
+	1    6300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4000 6300 4000
+Wire Bus Line
+	6150 3900 6600 3900
+Text Label 6200 3900 0    60   ~ 0
+b[0..7]
+Text Label 4750 4250 0    60   ~ 0
+CLK
+Wire Wire Line
+	5100 4000 4750 4000
+Wire Wire Line
+	5100 4150 4750 4150
+Wire Wire Line
+	5100 4250 4750 4250
+Wire Wire Line
+	5100 4350 4750 4350
+Wire Bus Line
+	5100 3900 4600 3900
+Entry Bus Bus
+	4500 3800 4600 3900
+Text Label 8650 6150 0    60   ~ 0
+~BO
+Text Label 6300 6700 0    60   ~ 0
+~BI
+Text Label 7300 6050 0    60   ~ 0
+CLR
+Text Label 3950 6600 0    60   ~ 0
+SU
+Text Label 6300 6500 0    60   ~ 0
+~EO
+Text Label 6300 6400 0    60   ~ 0
+~AO
+Text Label 6300 6300 0    60   ~ 0
+~AI
+Wire Wire Line
+	3850 1050 4250 1050
+Text Label 3950 1050 0    60   ~ 0
+CLK
+Wire Wire Line
+	7200 6050 7500 6050
+Wire Wire Line
+	5100 2550 4750 2550
+Wire Wire Line
+	5100 2450 4750 2450
+Wire Wire Line
+	5100 2350 4750 2350
+Wire Wire Line
+	5100 2200 4750 2200
+Text Label 4750 2450 0    60   ~ 0
+CLK
+Wire Bus Line
+	6150 2100 6600 2100
+Text Label 6200 2100 0    60   ~ 0
+a[0..7]
+$Comp
+L GND #PWR07
+U 1 1 5915EFD4
+P 6300 2200
+F 0 "#PWR07" H 6300 1950 50  0001 C CNN
+F 1 "GND" H 6300 2050 50  0000 C CNN
+F 2 "" H 6300 2200 50  0000 C CNN
+F 3 "" H 6300 2200 50  0000 C CNN
+	1    6300 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2200 6300 2200
+Wire Wire Line
+	5100 3150 4750 3150
+Wire Wire Line
+	5100 3300 4750 3300
+Wire Wire Line
+	5100 3400 4750 3400
+Wire Bus Line
+	5100 3050 4600 3050
+Entry Bus Bus
+	4500 2950 4600 3050
+Text Label 4500 700  0    60   ~ 0
+w[0..7]
+Wire Bus Line
+	6150 3050 6600 3050
+Wire Bus Line
+	6150 3150 6600 3150
+Text Label 6200 3050 0    60   ~ 0
+a[0..7]
+Text Label 6200 3150 0    60   ~ 0
+b[0..7]
+$Sheet
+S 5100 950  1050 650 
+U 5918B711
+F0 "PC" 60
+F1 "programcounter.sch" 60
+F2 "~WENABLE" I L 5100 1150 60 
+F3 "INCREMENT" I L 5100 1500 60 
+F4 "~LOAD" I L 5100 1300 60 
+F5 "w[0..7]" T L 5100 1050 60 
+F6 "CLK" I L 5100 1400 60 
+F7 "r[0..7]" O R 6150 1050 60 
+$EndSheet
+Entry Bus Bus
+	4500 950  4600 1050
+Wire Bus Line
+	4600 1050 5100 1050
+Wire Wire Line
+	5100 1150 4750 1150
+Wire Wire Line
+	5100 1300 4750 1300
+Wire Wire Line
+	5100 1500 4750 1500
+Text Label 4750 1150 0    60   ~ 0
+~CO
+Text Label 4750 1300 0    60   ~ 0
+~J
+Text Label 4750 1500 0    60   ~ 0
+CE
+Text Label 6300 7000 0    60   ~ 0
+~CO
+Text Label 6300 7100 0    60   ~ 0
+~J
+Text Label 3950 6900 0    60   ~ 0
+CE
+Text Label 4750 3400 0    60   ~ 0
+CY
+Text Label 2350 5950 0    60   ~ 0
+CY
+Wire Bus Line
+	6600 3050 6600 2100
+Wire Bus Line
+	6600 3150 6600 3900
+$Sheet
+S 5100 4700 1050 700 
+U 591ACD24
+F0 "output" 60
+F1 "output.sch" 60
+F2 "CLK" I L 5100 5050 60 
+F3 "LOAD" I L 5100 4950 60 
+F4 "~CLR" I L 5100 5150 60 
+F5 "SIGN" I L 5100 5300 60 
+F6 "w[0..7]" I L 5100 4800 60 
+$EndSheet
+$Sheet
+S 2700 2000 1150 1000
+U 591ACDBD
+F0 "memory" 60
+F1 "memory.sch" 60
+F2 "w[0..7]" T R 3850 2100 60 
+F3 "CLK" I R 3850 2450 60 
+F4 "~ALOAD" I R 3850 2350 60 
+F5 "CLR" I R 3850 2550 60 
+F6 "~WENABLE" I R 3850 2200 60 
+F7 "WRITE" I R 3850 2650 60 
+$EndSheet
+$Sheet
+S 2700 5600 1150 1600
+U 591ACE0B
+F0 "control" 60
+F1 "control.sch" 60
+F2 "~CLK" I L 2700 5850 60 
+F3 "i[0..7]" I L 2700 5700 60 
+F4 "CY" I L 2700 5950 60 
+F5 "HLT" O R 3850 5700 60 
+F6 "MI" O R 3850 5800 60 
+F7 "RI" O R 3850 5900 60 
+F8 "RO" O R 3850 6000 60 
+F9 "IO" O R 3850 6100 60 
+F10 "II" O R 3850 6200 60 
+F11 "AI" O R 3850 6300 60 
+F12 "AO" O R 3850 6400 60 
+F13 "EO" O R 3850 6500 60 
+F14 "SU" O R 3850 6600 60 
+F15 "BI" O R 3850 6700 60 
+F16 "OI" O R 3850 6800 60 
+F17 "CE" O R 3850 6900 60 
+F18 "CO" O R 3850 7000 60 
+F19 "J" O R 3850 7100 60 
+$EndSheet
+Wire Wire Line
+	5100 1400 4750 1400
+Text Label 4750 1400 0    60   ~ 0
+CLK
+$Sheet
+S 2700 3800 1150 650 
+U 5913390B
+F0 "IR" 60
+F1 "instructionregister.sch" 60
+F2 "~RENABLE" I L 2700 4000 60 
+F3 "CLR" I R 3850 4350 60 
+F4 "~LOAD" I R 3850 4150 60 
+F5 "~WENABLE" I R 3850 4000 60 
+F6 "w[0..7]" T R 3850 3900 60 
+F7 "CLK" I R 3850 4250 60 
+F8 "r[0..7]" O L 2700 3900 60 
+$EndSheet
+Entry Bus Bus
+	4400 3900 4500 4000
+Wire Bus Line
+	3850 3900 4400 3900
+Wire Wire Line
+	3850 4150 4250 4150
+Wire Wire Line
+	4250 4250 3850 4250
+Wire Wire Line
+	4250 4350 3850 4350
+Text Label 4250 4250 2    60   ~ 0
+CLK
+Text Label 4250 4350 2    60   ~ 0
+CLR
+Wire Wire Line
+	4250 4000 3850 4000
+Text Label 4250 4000 2    60   ~ 0
+~IO
+Text Label 4250 4150 2    60   ~ 0
+~II
+$Comp
+L GND #PWR08
+U 1 1 5914424C
+P 2600 4000
+F 0 "#PWR08" H 2600 3750 50  0001 C CNN
+F 1 "GND" H 2600 3850 50  0000 C CNN
+F 2 "" H 2600 4000 50  0000 C CNN
+F 3 "" H 2600 4000 50  0000 C CNN
+	1    2600 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4000 2600 4000
+Wire Wire Line
+	5100 4950 4750 4950
+Wire Wire Line
+	5100 5050 4750 5050
+Wire Wire Line
+	4650 5150 5100 5150
+Wire Wire Line
+	4650 5300 5100 5300
+Text Label 4750 4950 0    60   ~ 0
+OI
+Text Label 4750 5050 0    60   ~ 0
+CLK
+$Comp
+L VCC #PWR09
+U 1 1 5912653E
+P 4650 5150
+F 0 "#PWR09" H 4650 5000 50  0001 C CNN
+F 1 "VCC" H 4650 5300 50  0000 C CNN
+F 2 "" H 4650 5150 50  0000 C CNN
+F 3 "" H 4650 5150 50  0000 C CNN
+	1    4650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 591266F0
+P 4650 5300
+F 0 "#PWR010" H 4650 5050 50  0001 C CNN
+F 1 "GND" H 4650 5150 50  0000 C CNN
+F 2 "" H 4650 5300 50  0000 C CNN
+F 3 "" H 4650 5300 50  0000 C CNN
+	1    4650 5300
+	1    0    0    -1  
+$EndComp
+Entry Bus Bus
+	4500 4700 4600 4800
+Wire Bus Line
+	5100 4800 4600 4800
+$Sheet
+S 5100 5600 1050 1600
+U 5912F997
+F0 "status" 60
+F1 "status.sch" 60
+F2 "HLT" I L 5100 5700 60 
+F3 "~MI" O R 6150 5800 60 
+F4 "MI" I L 5100 5800 60 
+F5 "RI" I L 5100 5900 60 
+F6 "RO" I L 5100 6000 60 
+F7 "~RO" O R 6150 6000 60 
+F8 "~IO" O R 6150 6100 60 
+F9 "IO" I L 5100 6100 60 
+F10 "II" I L 5100 6200 60 
+F11 "~II" O R 6150 6200 60 
+F12 "~AI" O R 6150 6300 60 
+F13 "AI" I L 5100 6300 60 
+F14 "AO" I L 5100 6400 60 
+F15 "~AO" O R 6150 6400 60 
+F16 "~EO" O R 6150 6500 60 
+F17 "EO" I L 5100 6500 60 
+F18 "SU" I L 5100 6600 60 
+F19 "BI" I L 5100 6700 60 
+F20 "~BI" O R 6150 6700 60 
+F21 "OI" I L 5100 6800 60 
+F22 "CE" I L 5100 6900 60 
+F23 "CO" I L 5100 7000 60 
+F24 "J" I L 5100 7100 60 
+F25 "~CO" O R 6150 7000 60 
+F26 "~J" O R 6150 7100 60 
+$EndSheet
+Wire Wire Line
+	3850 1250 4250 1250
+Text Label 3950 1250 0    60   ~ 0
+HLT
+Wire Wire Line
+	6500 7100 6150 7100
+Wire Wire Line
+	6500 7000 6150 7000
+Wire Wire Line
+	6500 6700 6150 6700
+Wire Wire Line
+	6500 6500 6150 6500
+Wire Wire Line
+	6500 6400 6150 6400
+Wire Wire Line
+	6500 6300 6150 6300
+Wire Wire Line
+	6500 6200 6150 6200
+Wire Wire Line
+	6500 6100 6150 6100
+Wire Wire Line
+	6500 6000 6150 6000
+Wire Wire Line
+	6500 5800 6150 5800
+Text Label 6300 6200 0    60   ~ 0
+~II
+Text Label 6300 6100 0    60   ~ 0
+~IO
+$Comp
+L VCC #PWR011
+U 1 1 591A255E
+P 8550 6150
+F 0 "#PWR011" H 8550 6000 50  0001 C CNN
+F 1 "VCC" H 8550 6300 50  0000 C CNN
+F 2 "" H 8550 6150 50  0000 C CNN
+F 3 "" H 8550 6150 50  0000 C CNN
+	1    8550 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 6150 8850 6150
+Wire Wire Line
+	3850 1150 4250 1150
+Text Label 3950 1150 0    60   ~ 0
+~CLK
+Wire Bus Line
+	2700 3900 2250 3900
+Wire Bus Line
+	2250 3900 2250 5700
+Wire Bus Line
+	2250 5700 2700 5700
+Wire Wire Line
+	2700 5850 2350 5850
+Wire Wire Line
+	2350 5950 2700 5950
+Text Label 2350 5850 0    60   ~ 0
+~CLK
+Wire Wire Line
+	4150 5700 3850 5700
+Wire Wire Line
+	4150 5800 3850 5800
+Wire Wire Line
+	4150 5900 3850 5900
+Wire Wire Line
+	4150 6000 3850 6000
+Wire Wire Line
+	4150 6100 3850 6100
+Wire Wire Line
+	4150 6200 3850 6200
+Wire Wire Line
+	4150 6300 3850 6300
+Wire Wire Line
+	4150 6400 3850 6400
+Wire Wire Line
+	3850 6500 4150 6500
+Wire Wire Line
+	4150 6600 3850 6600
+Wire Wire Line
+	4150 6700 3850 6700
+Wire Wire Line
+	4150 6800 3850 6800
+Wire Wire Line
+	4150 6900 3850 6900
+Wire Wire Line
+	4150 7000 3850 7000
+Wire Wire Line
+	4150 7100 3850 7100
+Wire Wire Line
+	4750 5700 5100 5700
+Wire Wire Line
+	4750 5800 5100 5800
+Wire Wire Line
+	4750 5900 5100 5900
+Wire Wire Line
+	4750 6000 5100 6000
+Wire Wire Line
+	4750 6100 5100 6100
+Wire Wire Line
+	4750 6200 5100 6200
+Wire Wire Line
+	4750 6300 5100 6300
+Wire Wire Line
+	4750 6400 5100 6400
+Wire Wire Line
+	4750 6500 5100 6500
+Wire Wire Line
+	4750 6600 5100 6600
+Wire Wire Line
+	4750 6700 5100 6700
+Wire Wire Line
+	4750 6800 5100 6800
+Wire Wire Line
+	4750 6900 5100 6900
+Wire Wire Line
+	4750 7000 5100 7000
+Wire Wire Line
+	4750 7100 5100 7100
+Text Label 4850 6600 0    60   ~ 0
+SU
+Text Label 4850 6900 0    60   ~ 0
+CE
+Text Label 4000 7100 0    60   ~ 0
+J
+Text Label 4850 7100 0    60   ~ 0
+J
+Text Label 3950 7000 0    60   ~ 0
+CO
+Text Label 4850 7000 0    60   ~ 0
+CO
+Text Label 3900 5700 0    60   ~ 0
+HLT
+Text Label 4850 5700 0    60   ~ 0
+HLT
+Text Label 3950 5800 0    60   ~ 0
+MI
+Text Label 3950 5900 0    60   ~ 0
+RI
+Text Label 3950 6000 0    60   ~ 0
+RO
+Text Label 3950 6100 0    60   ~ 0
+IO
+Text Label 3950 6200 0    60   ~ 0
+II
+Text Label 3950 6300 0    60   ~ 0
+AI
+Text Label 3950 6400 0    60   ~ 0
+AO
+Text Label 3950 6500 0    60   ~ 0
+EO
+Text Label 3950 6700 0    60   ~ 0
+BI
+Text Label 3950 6800 0    60   ~ 0
+OI
+Text Label 4850 5800 0    60   ~ 0
+MI
+Text Label 4850 5900 0    60   ~ 0
+RI
+Text Label 4850 6000 0    60   ~ 0
+RO
+Text Label 4850 6100 0    60   ~ 0
+IO
+Text Label 4850 6200 0    60   ~ 0
+II
+Text Label 4850 6300 0    60   ~ 0
+AI
+Text Label 4850 6400 0    60   ~ 0
+AO
+Text Label 4850 6500 0    60   ~ 0
+EO
+Text Label 4850 6700 0    60   ~ 0
+BI
+Text Label 4850 6800 0    60   ~ 0
+OI
+Text Label 6300 5800 0    60   ~ 0
+~MI
+Text Label 6300 6000 0    60   ~ 0
+~RO
+Wire Bus Line
+	3850 2100 4400 2100
+Entry Bus Bus
+	4400 2100 4500 2200
+Wire Wire Line
+	4250 2200 3850 2200
+Wire Wire Line
+	4250 2350 3850 2350
+Wire Wire Line
+	4250 2450 3850 2450
+Wire Wire Line
+	4250 2550 3850 2550
+Wire Wire Line
+	4250 2650 3850 2650
+Text Label 4250 2200 2    60   ~ 0
+~RO
+Text Label 4250 2350 2    60   ~ 0
+~MI
+Text Label 4250 2450 2    60   ~ 0
+CLK
+Text Label 4250 2550 2    60   ~ 0
+CLR
+Text Label 4250 2650 2    60   ~ 0
+RI
+Text Label 4750 1050 0    60   ~ 0
+w[0..7]
+Text Label 4750 2100 0    60   ~ 0
+w[0..7]
+Text Label 4750 3050 0    60   ~ 0
+w[0..7]
+Text Label 4750 3900 0    60   ~ 0
+w[0..7]
+Text Label 4750 4800 0    60   ~ 0
+w[0..7]
+Text Label 4250 3900 2    60   ~ 0
+w[0..7]
+Text Label 4250 2100 2    60   ~ 0
+w[0..7]
+$EndSCHEMATC
