@@ -1,6 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:28c16
-LIBS:74xxx
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -31,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:switches
+LIBS:74xxx
+LIBS:28c16
 LIBS:sap-be-cache
 EELAYER 25 0
 EELAYER END
@@ -170,10 +170,10 @@ F 3 "" H 3350 5550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR012
+L VCC #PWR10
 U 1 1 590D04F1
 P 7200 4100
-F 0 "#PWR012" H 7200 3950 50  0001 C CNN
+F 0 "#PWR10" H 7200 3950 50  0001 C CNN
 F 1 "VCC" H 7200 4250 50  0000 C CNN
 F 2 "" H 7200 4100 50  0000 C CNN
 F 3 "" H 7200 4100 50  0000 C CNN
