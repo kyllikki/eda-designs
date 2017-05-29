@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 11
+Sheet 4 11
 Title "Simple As Possible computer by Ben Eater"
 Date "2017-05-10"
 Rev "0"
@@ -187,8 +187,6 @@ Text Label 3200 2050 0    60   ~ 0
 CLR
 Text HLabel 3100 2350 0    60   Input ~ 0
 ~RENABLE
-Text HLabel 3100 2050 0    60   Input ~ 0
-CLR
 Text HLabel 3100 1750 0    60   Input ~ 0
 ~LOAD
 $Comp
@@ -332,12 +330,12 @@ CLK
 Text Label 3800 2700 0    60   ~ 0
 ~LOAD
 $Comp
-L GND #PWR25
+L GND #PWR025
 U 1 1 591439AA
 P 8650 4700
-AR Path="/590AA801/591439AA" Ref="#PWR25"  Part="1" 
-AR Path="/590A2A35/591439AA" Ref="#PWR27"  Part="1" 
-F 0 "#PWR27" H 8650 4450 50  0001 C CNN
+AR Path="/590AA801/591439AA" Ref="#PWR025"  Part="1" 
+AR Path="/590A2A35/591439AA" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 8650 4450 50  0001 C CNN
 F 1 "GND" H 8650 4550 50  0000 C CNN
 F 2 "" H 8650 4700 50  0000 C CNN
 F 3 "" H 8650 4700 50  0000 C CNN
@@ -546,12 +544,12 @@ Entry Bus Bus
 Wire Bus Line
 	3600 1600 3100 1600
 $Comp
-L VCC #PWR26
+L VCC #PWR028
 U 1 1 59141563
 P 6550 3400
-AR Path="/590A2A35/59141563" Ref="#PWR26"  Part="1" 
-AR Path="/590AA801/59141563" Ref="#PWR24"  Part="1" 
-F 0 "#PWR26" H 6550 3250 50  0001 C CNN
+AR Path="/590A2A35/59141563" Ref="#PWR028"  Part="1" 
+AR Path="/590AA801/59141563" Ref="#PWR026"  Part="1" 
+F 0 "#PWR028" H 6550 3250 50  0001 C CNN
 F 1 "VCC" H 6550 3550 50  0000 C CNN
 F 2 "" H 6550 3400 50  0000 C CNN
 F 3 "" H 6550 3400 50  0000 C CNN
@@ -596,4 +594,6 @@ Text Label 8100 3100 0    60   ~ 0
 w6
 Text Label 8100 3200 0    60   ~ 0
 w7
+Text HLabel 3100 2050 0    60   Input ~ 0
+RESET
 $EndSCHEMATC

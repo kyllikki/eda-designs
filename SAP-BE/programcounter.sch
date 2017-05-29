@@ -76,7 +76,7 @@ F 3 "" H 5450 4050 50  0000 C CNN
 	1    5450 4050
 	1    0    0    -1  
 $EndComp
-Text Label 4450 2700 0    60   ~ 0
+Text Label 4500 2700 0    60   ~ 0
 ENABLE
 Text Label 3700 2250 0    60   ~ 0
 ENABLE
@@ -84,7 +84,7 @@ Text Label 3700 1950 0    60   ~ 0
 ~WENABLE
 Text Label 4400 4550 0    60   ~ 0
 ~WENABLE
-Text Label 4450 2600 0    60   ~ 0
+Text Label 4500 2600 0    60   ~ 0
 ~LOAD
 Text Label 3700 2100 0    60   ~ 0
 ~LOAD
@@ -157,13 +157,13 @@ Wire Wire Line
 	4450 2200 4750 2200
 Wire Wire Line
 	4450 2100 4750 2100
-Text Label 4550 2100 0    60   ~ 0
+Text Label 4500 2100 0    60   ~ 0
 w0
-Text Label 4550 2200 0    60   ~ 0
+Text Label 4500 2200 0    60   ~ 0
 w1
-Text Label 4550 2300 0    60   ~ 0
+Text Label 4500 2300 0    60   ~ 0
 w2
-Text Label 4550 2400 0    60   ~ 0
+Text Label 4500 2400 0    60   ~ 0
 w3
 Entry Wire Line
 	4350 2000 4450 2100
@@ -177,7 +177,7 @@ Wire Bus Line
 	4350 1800 4350 4150
 Wire Wire Line
 	4450 2900 4750 2900
-Text Label 4450 2900 0    60   ~ 0
+Text Label 4500 2900 0    60   ~ 0
 CLK
 Entry Wire Line
 	6300 4250 6400 4350
@@ -204,10 +204,10 @@ r2
 Text Label 6150 2400 0    60   ~ 0
 r3
 $Comp
-L GND #PWR29
+L GND #PWR029
 U 1 1 591B1C69
 P 6150 3200
-F 0 "#PWR29" H 6150 2950 50  0001 C CNN
+F 0 "#PWR029" H 6150 2950 50  0001 C CNN
 F 1 "GND" H 6150 3050 50  0000 C CNN
 F 2 "" H 6150 3200 50  0000 C CNN
 F 3 "" H 6150 3200 50  0000 C CNN
@@ -310,10 +310,10 @@ r2
 Text Label 7500 3600 0    60   ~ 0
 r3
 $Comp
-L GND #PWR30
+L GND #PWR030
 U 1 1 591B25A3
 P 7800 4100
-F 0 "#PWR30" H 7800 3850 50  0001 C CNN
+F 0 "#PWR030" H 7800 3850 50  0001 C CNN
 F 1 "GND" H 7800 3950 50  0000 C CNN
 F 2 "" H 7800 4100 50  0000 C CNN
 F 3 "" H 7800 4100 50  0000 C CNN
@@ -348,16 +348,15 @@ Connection ~ 7500 4000
 Wire Wire Line
 	7800 4000 7800 4100
 NoConn ~ 6150 2600
-NoConn ~ 4750 3100
 Entry Bus Bus
 	4250 1700 4350 1800
 Wire Bus Line
 	4250 1700 3700 1700
 $Comp
-L GND #PWR28
+L GND #PWR031
 U 1 1 59145790
 P 4250 4450
-F 0 "#PWR28" H 4250 4200 50  0001 C CNN
+F 0 "#PWR031" H 4250 4200 50  0001 C CNN
 F 1 "GND" H 4250 4300 50  0000 C CNN
 F 2 "" H 4250 4450 50  0000 C CNN
 F 3 "" H 4250 4450 50  0000 C CNN
@@ -396,21 +395,21 @@ Wire Wire Line
 	6300 4150 6150 4150
 Wire Wire Line
 	6150 4250 6300 4250
-Text Label 4550 3550 0    60   ~ 0
+Text Label 4500 3550 0    60   ~ 0
 w0
-Text Label 4550 3650 0    60   ~ 0
+Text Label 4500 3650 0    60   ~ 0
 w1
-Text Label 4550 3750 0    60   ~ 0
+Text Label 4500 3750 0    60   ~ 0
 w2
-Text Label 4550 3850 0    60   ~ 0
+Text Label 4500 3850 0    60   ~ 0
 w3
-Text Label 4550 3950 0    60   ~ 0
+Text Label 4500 3950 0    60   ~ 0
 w4
-Text Label 4550 4050 0    60   ~ 0
+Text Label 4500 4050 0    60   ~ 0
 w5
-Text Label 4550 4150 0    60   ~ 0
+Text Label 4500 4150 0    60   ~ 0
 w6
-Text Label 4550 4250 0    60   ~ 0
+Text Label 4500 4250 0    60   ~ 0
 w7
 Wire Wire Line
 	4450 3550 4750 3550
@@ -428,4 +427,14 @@ Wire Wire Line
 	4450 4150 4750 4150
 Wire Wire Line
 	4450 4250 4750 4250
+Text HLabel 3600 2550 0    60   Input ~ 0
+~RESET
+Wire Wire Line
+	3600 2550 4200 2550
+Text Label 3700 2550 0    60   ~ 0
+~RST
+Wire Wire Line
+	4450 3100 4750 3100
+Text Label 4500 3100 0    60   ~ 0
+~RST
 $EndSCHEMATC
