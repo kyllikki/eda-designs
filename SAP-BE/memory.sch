@@ -36,7 +36,7 @@ EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 11
+Sheet 8 12
 Title "Simple As Possible computer by Ben Eater"
 Date "2017-05-10"
 Rev "0"

@@ -36,7 +36,7 @@ EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 11
+Sheet 9 12
 Title "Simple As Possible computer by Ben Eater"
 Date "2017-05-10"
 Rev "0"
@@ -124,8 +124,6 @@ Text Label 4800 3000 0    60   ~ 0
 ~t4
 Text Label 4800 3100 0    60   ~ 0
 ~t5
-Text HLabel 1750 4350 0    60   Input ~ 0
-CY
 Text HLabel 4600 5050 2    60   Output ~ 0
 HLT
 Text HLabel 4600 4950 2    60   Output ~ 0
@@ -181,7 +179,7 @@ $EndComp
 Text Label 1800 4200 0    60   ~ 0
 i[0..7]
 Text Label 1850 4350 0    60   ~ 0
-CY
+CF
 $Comp
 L GND #PWR059
 U 1 1 59258439
@@ -298,7 +296,6 @@ Text Label 6750 4850 2    60   ~ 0
 i6
 Text Label 6750 4950 2    60   ~ 0
 i7
-NoConn ~ 8450 4350
 NoConn ~ 4900 3200
 $Comp
 L LED D62
@@ -527,16 +524,24 @@ $EndComp
 Text Notes 1150 700  0    60   ~ 0
 Reset
 $Comp
-L VCC #PWR?
+L VCC #PWR069
 U 1 1 5ACBD5E7
 P 6300 5000
-F 0 "#PWR?" H 6300 4850 50  0001 C CNN
+F 0 "#PWR069" H 6300 4850 50  0001 C CNN
 F 1 "VCC" H 6300 5150 50  0000 C CNN
 F 2 "" H 6300 5000 50  0000 C CNN
 F 3 "" H 6300 5000 50  0000 C CNN
 	1    6300 5000
 	1    0    0    -1  
 $EndComp
+Text HLabel 8450 4350 2    60   Output ~ 0
+FI
+Text Label 1950 4500 2    60   ~ 0
+ZF
+Text HLabel 1750 4350 0    60   Input ~ 0
+CF
+Text HLabel 1750 4500 0    60   Input ~ 0
+ZF
 Wire Wire Line
 	1650 3400 1250 3400
 Wire Wire Line
@@ -629,7 +634,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 4950 2950 4950
 Wire Wire Line
-	2700 5050 2950 5050
+	2450 5050 2950 5050
 Wire Wire Line
 	2700 5150 2950 5150
 Wire Wire Line
@@ -681,13 +686,6 @@ Wire Wire Line
 	6550 5950 6800 5950
 Wire Wire Line
 	6550 5950 6550 5900
-Wire Wire Line
-	2700 5050 2700 5450
-Connection ~ 2700 5150
-Connection ~ 2700 5250
-Connection ~ 2700 5350
-Connection ~ 6550 5350
-Connection ~ 6550 5250
 Wire Wire Line
 	8450 5050 8200 5050
 Wire Wire Line
@@ -776,10 +774,35 @@ Wire Notes Line
 Wire Notes Line
 	1100 2200 1100 600 
 Wire Wire Line
-	6550 5450 6550 5150
-Wire Wire Line
 	6300 5050 6300 5000
 Connection ~ 2700 6150
 Wire Wire Line
 	2700 5950 2700 5900
+Wire Wire Line
+	1750 4500 2000 4500
+Wire Wire Line
+	2700 5350 2700 5450
+$Comp
+L GND #PWR070
+U 1 1 5AD4813A
+P 2450 5100
+F 0 "#PWR070" H 2450 4850 50  0001 C CNN
+F 1 "GND" H 2450 4950 50  0000 C CNN
+F 2 "" H 2450 5100 50  0000 C CNN
+F 3 "" H 2450 5100 50  0000 C CNN
+	1    2450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5100 2450 5050
+Wire Wire Line
+	6550 5350 6550 5450
+Text Label 2750 5150 0    60   ~ 0
+CF
+Text Label 2750 5250 0    60   ~ 0
+ZF
+Text Label 6650 5150 0    60   ~ 0
+CF
+Text Label 6650 5250 0    60   ~ 0
+ZF
 $EndSCHEMATC
