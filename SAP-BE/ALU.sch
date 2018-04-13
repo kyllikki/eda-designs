@@ -39,7 +39,7 @@ encoding utf-8
 Sheet 2 12
 Title "Simple As Possible computer by Ben Eater"
 Date "2017-05-10"
-Rev "0"
+Rev "1"
 Comp "Schematic released as CC BY-SA"
 Comment1 "Schematic capture by Vincent Sanders"
 Comment2 "Arithmetic Logic Unit"

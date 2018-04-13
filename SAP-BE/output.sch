@@ -39,10 +39,10 @@ encoding utf-8
 Sheet 7 12
 Title "Simple As Possible computer by Ben Eater"
 Date "2017-05-10"
-Rev "0"
+Rev "1"
 Comp "Schematic released as CC BY-SA"
 Comment1 "Schematic capture by Vincent Sanders"
-Comment2 ""
+Comment2 "7 segment output register"
 Comment3 ""
 Comment4 ""
 $EndDescr
